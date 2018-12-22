@@ -1,0 +1,11 @@
+.<%= title %> {
+	background: yellow;
+
+	&--red {
+		background: red;
+	}
+
+	&--blue {
+		background: blue;
+	}
+}
