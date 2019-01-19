@@ -1,13 +1,18 @@
+import React, { Component } from 'react';
+import './Home.scss';
 import Header from '../../components/Header/Header';
-import React from 'react';
+import Hero from '../../components/Hero/Hero';
 
-const homePage = () => {
-    return (
-        <div>
-            <Header />
-            This is some page copy
-        </div>
-    );
-};
+class Home extends Component {
+    render() {
+        const { colour, title } = this.props;
+        return (
+            <div>
+                <Header />
+                <Hero title="Home page" body="this is the home page" />
+            </div>
+        );
+    }
+}
 
-export default homePage;
+export default Home;

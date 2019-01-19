@@ -1,44 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#React test dev stack
 
-## Available Scripts
+##summary
 
-In the project directory, you can run:
+This project has been setup to act as a playground where we can play with a development stack for future react application.
 
-### `npm start`
+This project is bootstrapped from CRA (create react app), has Storybook for a pattern library and
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Setup
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+-   run npm install -g yo to install yeoman globally
 
-### `npm test`
+##react
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React is being used as to build our SPA.
 
-### `npm run build`
+Usage
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   run npm / yarn start to begin development enviroment
+-   run npm / yarn build for a compiled version of the app
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+##Yeoman
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+https://yeoman.io/
 
-### `npm run eject`
+Yeoman is a command line scaffolding tool for creating blocks of code. It can befor any kind of file / code gneration. In this project I am using it as a way to create React components.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Setup / Usage
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   run npm install -g yo to install yeoman globally
+-   run yo react:component (answer all the questions asked)
+-   run yo react:view (answer all the questions asked)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+currently it is setup to generate a class component or a functional component based on whats needed. You can also generate a new view if needed.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+##Storybook
 
-## Learn More
+https://storybook.js.org/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Storybook Is a component / pattern library for your project.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Usage
+
+-   Run yarn / npm run storybook
+
+This will spin up a new dev server which allows you to view all of your components and views in isolation. There are many plugins but I have added Knobs which allows you to load your component with different possible states.
+
+##Styleguidist
+
+An alternative component / pattern library to use with react.
+
+Usage
+
+-   Run npx styleguidist server to start a style guide dev server.
+
+You can use markdown files in each component folder for documentation and examples. Currently the storybook files are been render as they are js files. If we were to use this these files would be removed. Also we would need to setup a seperate webpack config as be default it will only show stuff inside the component folder.
